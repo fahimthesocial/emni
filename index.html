@@ -1,199 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahix.com - Professional Marketplace</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;600;700&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raihan Hossen | Portfolio</title>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: #f8fafc; color: #1e293b; }
+<link rel="stylesheet" href="css/style.css">
 
-        /* Header Shortened */
-        header { background: #fff; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-family: 'Dancing Script', cursive; font-size: 32px; font-weight: 700; color: #2563eb; cursor: pointer; }
-        .logo span { color: #f97316; font-family: 'Dancing Script', cursive; }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        .search-bar { display: flex; align-items: center; background: #f1f5f9; border-radius: 20px; padding: 5px 15px; width: 30%; border: 1px solid #e2e8f0; }
-        .search-bar input { border: none; background: transparent; outline: none; width: 100%; font-size: 14px; }
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-        .nav-links { display: flex; gap: 20px; align-items: center; font-weight: 600; font-size: 14px; }
-        .nav-links a { text-decoration: none; color: #475569; }
-        .icon-btn { font-size: 18px; color: #1e293b; cursor: pointer; position: relative; }
-        .badge { position: absolute; top: -8px; right: -10px; background: #ef4444; color: #fff; font-size: 10px; padding: 2px 5px; border-radius: 50%; }
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-        /* Welcome Section - Celebration Background 🎊🎉 */
-        .hero { 
-            text-align: center; padding: 60px 20px; 
-            background: #fff5f8 url('https://www.transparenttextures.com/patterns/celebration.png');
-            border-bottom: 2px solid #f97316;
-        }
-        .hero h1 { font-family: 'Dancing Script', cursive; font-size: 55px; color: #d63384; margin-bottom: 5px; }
-        .hero p { font-size: 18px; color: #64748b; font-weight: 500; }
-
-        /* Categories Filter */
-        .filter-section { padding: 20px 5%; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
-        .filter-btn { padding: 8px 18px; border-radius: 20px; border: 1px solid #e2e8f0; background: #fff; cursor: pointer; font-weight: 600; font-size: 13px; }
-        .filter-btn.active { background: #2563eb; color: #fff; border-color: #2563eb; }
-
-        /* Marketplace Grid */
-        .marketplace { padding: 10px 5% 60px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
-        
-        .card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
-        .card img { width: 100%; height: 160px; object-fit: cover; background: #f8fafc; }
-        .card-body { padding: 15px; }
-        .card-cat { font-size: 10px; color: #f97316; font-weight: 800; text-transform: uppercase; margin-bottom: 5px; }
-        .card-title { font-size: 15px; font-weight: 700; height: 38px; overflow: hidden; color: #1e293b; }
-        .card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; }
-        .price { font-size: 17px; font-weight: 800; color: #10b981; }
-        .buy-btn { background: #f1f5f9; border: none; padding: 6px 10px; border-radius: 6px; cursor: pointer; color: #2563eb; }
-
-        /* Footer */
-        footer { background: #0f172a; color: #e2e8f0; padding: 50px 5% 20px; margin-top: 40px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .footer-col h3 { color: #fff; margin-bottom: 20px; font-size: 18px; }
-        .contact-info p { margin-bottom: 12px; font-size: 14px; display: flex; align-items: center; gap: 10px; }
-        .contact-info i { color: #38bdf8; width: 15px; }
-        .payment-methods { display: flex; gap: 15px; font-size: 28px; margin-top: 20px; color: #94a3b8; }
-        .footer-bottom { border-top: 1px solid #1e293b; padding-top: 20px; margin-top: 40px; text-align: center; font-size: 12px; color: #64748b; }
-
-        /* Dot Menu for Mobile */
-        .dot-menu { display: none; cursor: pointer; font-size: 20px; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .dot-menu { display: block; }
-            .search-bar { width: 45%; }
-        }
-    </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">Fahix<span>.com</span></div>
-        
-        <div class="search-bar">
-            <input type="text" id="mainSearch" placeholder="Search products..." onkeyup="searchHandler()">
-            <i class="fas fa-search"></i>
-        </div>
+<div id="particles-js"></div>
 
-        <nav class="nav-links">
-            <a href="#">Explore</a>
-            <a href="#">Deals</a>
-            <div class="icon-btn">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="badge" id="cartCount">0</span>
-            </div>
-            <a href="#" style="background:#2563eb; color:white; padding:6px 16px; border-radius:6px">Login</a>
-        </nav>
+<header>
 
-        <div class="dot-menu"><i class="fas fa-ellipsis-v"></i></div>
-    </header>
+<div class="logo">
+RN <span>Deals</span>
+</div>
 
-    <section class="hero">
-        <h1>Welcome to Fahix.com 🎊</h1>
-        <p>Your Premium Destination for Tech, Pets & Daily Essentials</p>
-    </section>
+<nav>
 
-    <div class="filter-section">
-        <button class="filter-btn active" onclick="filterItems('all')">All Products</button>
-        <button class="filter-btn" onclick="filterItems('tech')">Tech Products</button>
-        <button class="filter-btn" onclick="filterItems('daily')">Daily Needs</button>
-        <button class="filter-btn" onclick="filterItems('pet')">Pet Supplies</button>
-    </div>
+<a href="#home">Home</a>
+<a href="#work">My Work</a>
+<a href="#creative">Creativity</a>
+<a href="#contact">Contact</a>
 
-    <section class="marketplace">
-        <div class="grid" id="productGrid">
-            </div>
-    </section>
+</nav>
 
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h3>Fahix.com</h3>
-                <p style="font-size: 14px; line-height: 1.6; color: #94a3b8;">The most trusted marketplace for all your digital and physical product needs. Quality guaranteed.</p>
-            </div>
-            <div class="footer-col contact-info">
-                <h3>Contact & Support</h3>
-                <p><i class="fas fa-envelope"></i> support@fahix.com</p>
-                <p><i class="fas fa-headset"></i> Hotline: +8801317621550</p>
-                <p><i class="fas fa-map-marker-alt"></i> Boalkhali, Chittagong, Bangladesh</p>
-            </div>
-            <div class="footer-col">
-                <h3>Safe Payments</h3>
-                <div class="payment-methods">
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-apple-pay"></i>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2026 Fahix.com. All Rights Reserved.
-        </div>
-    </footer>
+</header>
 
-    <script>
-        // Generate 100 Products
-        const productData = [];
-        const categories = ['tech', 'daily', 'pet'];
-        const techNames = ['Wireless Mouse', 'Gaming Keyboard', 'Smart Watch', 'Bluetooth Speaker', 'USB-C Hub', 'Monitor Stand', 'Webcam 4K', 'SSD 1TB'];
-        const dailyNames = ['Organic Soap', 'Water Bottle', 'Tote Bag', 'Notebook', 'Coffee Mug', 'Scented Candle', 'Umbrella'];
-        const petNames = ['Dog Chew Toy', 'Cat Litter Box', 'Pet Grooming Brush', 'Bird Cage', 'Fish Food', 'Leash & Harness'];
+<section id="home">
 
-        for(let i=1; i<=100; i++) {
-            let cat = categories[i % 3];
-            let name = "";
-            if(cat === 'tech') name = techNames[Math.floor(Math.random() * techNames.length)] + " " + i;
-            else if(cat === 'daily') name = dailyNames[Math.floor(Math.random() * dailyNames.length)] + " " + i;
-            else name = petNames[Math.floor(Math.random() * petNames.length)] + " " + i;
+<div class="left">
 
-            productData.push({
-                id: i,
-                name: name,
-                category: cat,
-                price: Math.floor(Math.random() * 200) + 10,
-                img: `https://picsum.photos/seed/fahix${i}/400/300`
-            });
-        }
+<h3>Hello, I'm</h3>
 
-        const grid = document.getElementById('productGrid');
+<h1>
+<span id="typing"></span>
+</h1>
 
-        function display(items) {
-            grid.innerHTML = items.map(p => `
-                <div class="card">
-                    <img src="${p.img}" alt="${p.name}">
-                    <div class="card-body">
-                        <div class="card-cat">${p.category}</div>
-                        <div class="card-title">${p.name}</div>
-                        <div class="card-footer">
-                            <span class="price">$${p.price}</span>
-                            <button class="buy-btn"><i class="fas fa-cart-plus"></i></button>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
+<h2>Founder & CEO of RN Deals</h2>
 
-        // Initial load
-        display(productData);
+<p>
 
-        function filterItems(cat) {
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            event.target.classList.add('active');
-            if(cat === 'all') display(productData);
-            else display(productData.filter(p => p.category === cat));
-        }
+📍 Bangladesh<br>
 
-        function searchHandler() {
-            let term = document.getElementById('mainSearch').value.toLowerCase();
-            display(productData.filter(p => p.name.toLowerCase().includes(term)));
-        }
-    </script>
+🎓 Chattogram Polytechnic Institute<br>
+
+📚 2nd Semester<br>
+
+✨ Dreaming Big & Living Simple
+
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn">
+Click Here
+</a>
+
+</div>
+
+<div class="social">
+
+<a href="https://www.instagram.com/md_raihan_hossen420?igsh=ZnJhd2FtcWpqZDk4" target="_blank">
+<i class="fab fa-instagram"></i>
+</a>
+
+<a href="https://www.facebook.com/share/1JaicCTSCA/" target="_blank">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="https://wa.me/8801933006113" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="assets/profile.png">
+
+</div>
+
+</section>
+
+<script src="js/particles.min.js"></script>
+<script src="js/particles.js"></script>
+<script src="js/script.js"></script>
+
 </body>
-</html>
+
+    </html> 
